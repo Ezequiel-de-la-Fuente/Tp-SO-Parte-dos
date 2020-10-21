@@ -4,7 +4,7 @@ import Model.Prioridad;
 import Model.admProcesamiento;
 import Model.admTablaProcesos;
 
-public class TestRoundRobinQ3 {
+public class TestSRT {
 
 	public static void main(String[] args) {
 		admProcesamiento admP1 = new admProcesamiento(20, 80);
@@ -16,13 +16,13 @@ public class TestRoundRobinQ3 {
 		admP1.agregarProceso("P5", 3, 6, 2, 4, Prioridad.Alta);
 		admP1.agregarProceso("P6", 4, 2, 1, 5, Prioridad.Media);
 
-		System.out.println("----------- Planificador RoundRobin q=1 -----------");
-		System.out.println(admP1.mostrarPlanificador(admP1.planificarRoundRobin(2)));
+		System.out.println("----------- Planificador SPN -----------");
+		System.out.println(admP1.mostrarPlanificador(admP1.planificarSRT()));
 		System.out.println(admP1.mostrarProcesos() + "\n-> hay 1 procesador" + "\n-> E/S Se realiza en paralelo\n");
 		
-		System.out.println("----------- Resultados RoundRobin q=1 -----------");
+		System.out.println("----------- Resultados SPN -----------");
 		admTablaProcesos admTP1 = new admTablaProcesos(admP1);
-		System.out.println(admTP1.mostrarResultados(admP1.planificarRoundRobin(2)));
+		System.out.println(admTP1.mostrarResultados(admP1.planificarSRT()));
 
 	}
 

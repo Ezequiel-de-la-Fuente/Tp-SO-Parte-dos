@@ -8,7 +8,7 @@ public class TestPrioridades {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		admProcesamiento admP1 = new admProcesamiento(20, 38);
+		admProcesamiento admP1 = new admProcesamiento(20, 80);
 
 		admP1.agregarProceso("P1", 1, 6, 5, 9, Prioridad.Alta);
 		admP1.agregarProceso("P2", 1, 6, 3, 5, Prioridad.Baja);
